@@ -4,7 +4,7 @@ pipeline {
     agent any
 
     tools {
-        docker 'dockerTool'
+        dockerTool 'docker'
     }
 
     stages {
@@ -31,4 +31,13 @@ pipeline {
             }
         }
     }
+//    post {
+//        // Clean after build
+//        always {
+//            cleanWs(cleanWhenNotBuilt: false,
+//                    deleteDirs: true,
+//                    disableDeferredWipeout: true,
+//                    notFailBuild: true)
+//        }
+//    }
 }

@@ -43,6 +43,15 @@ pipeline {
             }
         }
     }
+//    post {
+//        // Clean after build
+//        always {
+//            cleanWs(cleanWhenNotBuilt: false,
+//                    deleteDirs: true,
+//                    disableDeferredWipeout: true,
+//                    notFailBuild: true)
+//        }
+//    }
 }
 
 void withBuildConfiguration(Closure body) {
